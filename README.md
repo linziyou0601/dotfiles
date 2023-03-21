@@ -30,17 +30,21 @@ miniforge
 
 * 列出環境：`conda env list`
 
-java
+### java
 
 * 環境變數：`.zprofile`設定`JAVA_HOME`
 * 列出環境：`/usr/libexec/java_home -V`
 
-Node
+### Node
+
+nvm
 
 * 環境變數：`.zprofile`設定`NVM_DIR`
 * 列出環境：`nvm ls`
 
-Flutter
+### Flutter
+
+fvm
 
 * 環境變數：`.zprofile`設定`PATH`
 * 列出環境：`fvm list`
@@ -78,4 +82,4 @@ Flutter
 
 ### hosts
 
-目錄：`/private/etc/hosts`
+* 目錄：`/private/etc/hosts`
