@@ -21,3 +21,5 @@ cask "adoptopenjdk8"
 cask "font-caskaydia-cove-nerd-font"
 # Minimal installer for conda specific to conda-forge
 cask "miniforge"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
