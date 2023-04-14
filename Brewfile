@@ -10,6 +10,8 @@ brew "git"
 # Manage multiple Node.js versions
 brew "nvm"
 # Development kit for the Java programming language
+brew "openjdk@11"
+# Development kit for the Java programming language
 brew "openjdk@17"
 # Additional completion definitions for zsh
 brew "zsh-completions"
