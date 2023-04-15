@@ -19,6 +19,8 @@ brew "zsh-completions"
 brew "leoafarias/fvm/fvm"
 # AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk8"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Developer targeted fonts with a high number of glyphs
 cask "font-caskaydia-cove-nerd-font"
 # Minimal installer for conda specific to conda-forge
