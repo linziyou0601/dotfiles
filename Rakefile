@@ -42,7 +42,6 @@ end
 
 def install_dotfile
   files = Dir['.*'] - %w[. .. .DS_Store .git .gitignore .oh-my-zsh .config]
-  files << Dir.glob(".oh-my-zsh/custom/*")
   files << Dir.glob(".config/fish/*")
   files = files.flatten
   files.delete_if { |x| x.match(/\.\w+\.sw[a-z]/) }
@@ -100,6 +99,7 @@ def install_homebrew
     puts 'homebrew already to install'
   else
     run %{curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sh}
+    run %{eval $(/opt/homebrew/bin/brew shellenv)}
   end
 
   run %{brew bundle --file #{Dir.pwd}/Brewfile}
@@ -123,13 +123,12 @@ def move_zsh_themes
   puts GREEN + "Linking oh-my-zsh theme..."                             + NONE
   puts GREEN + "======================================================" + NONE
   puts
-  source = "#{Dir.pwd}/.oh-my-zsh/themes/powerlevel10k"
   target = "#{Dir.home}/.oh-my-zsh/custom/themes/powerlevel10k"
-  puts "link zsh_themes from #{target} -> #{source}"
+  puts "clone powerlevel10k zsh_themes from git to #{target}"
 
   run %{ rm -rf #{target}.backup} if File.exists?(target + ".backup")
   run %{ mv #{target} #{target}.backup}
-  run %{ln -s #{source} #{target}}
+  run %{ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git #{target}} unless File.exists?(target)
 end
 
 def success_msg
