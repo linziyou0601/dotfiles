@@ -27,3 +27,5 @@ cask "font-caskaydia-cove-nerd-font"
 cask "miniforge"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Control your tools with a few keystrokes
+cask "raycast"
