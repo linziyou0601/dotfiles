@@ -1,7 +1,7 @@
-tap "adoptopenjdk/openjdk"
 tap "dart-lang/dart"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "leoafarias/fvm"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
@@ -17,8 +17,6 @@ brew "openjdk@17"
 brew "zsh-completions"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
-# AdoptOpenJDK OpenJDK (Java) Development Kit
-cask "adoptopenjdk8"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Developer targeted fonts with a high number of glyphs
@@ -29,3 +27,5 @@ cask "miniforge"
 cask "ngrok"
 # Control your tools with a few keystrokes
 cask "raycast"
+# OpenJDK distribution from Azul
+cask "zulu8"

@@ -83,3 +83,8 @@ fvm
 ### hosts
 
 * 目錄：`/private/etc/hosts`
+
+### 標楷體
+
+1. 停用BiauKai
+2. 安裝Kaiu至 `~/Library/Fonts/DFKai-Patched-for-macOS` ，測試是否正常
