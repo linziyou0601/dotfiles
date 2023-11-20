@@ -11,8 +11,6 @@ brew "git"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
-# Development kit for the Java programming language
-brew "openjdk@17"
 # Additional completion definitions for zsh
 brew "zsh-completions"
 # Simple cli to manage Flutter SDK versions per project
@@ -27,5 +25,7 @@ cask "miniforge"
 cask "ngrok"
 # Control your tools with a few keystrokes
 cask "raycast"
+# OpenJDK distribution from Azul
+cask "zulu17"
 # OpenJDK distribution from Azul
 cask "zulu8"
