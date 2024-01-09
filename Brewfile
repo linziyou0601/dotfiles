@@ -3,6 +3,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "leoafarias/fvm"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # Distributed revision control system
@@ -23,6 +25,8 @@ cask "font-caskaydia-cove-nerd-font"
 cask "miniforge"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Open source build of Lens Kubernetes IDE
+cask "openlens"
 # Control your tools with a few keystrokes
 cask "raycast"
 # OpenJDK distribution from Azul
