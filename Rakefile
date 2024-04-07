@@ -41,9 +41,13 @@ def welcome_message
 end
 
 def install_dotfile
+  # 取得當前目錄下所有以 `.` 開頭的檔案及目錄，並移除不需要的項目
   files = Dir['.*'] - %w[. .. .DS_Store .git .gitignore .oh-my-zsh .config]
+  # 將 `.config/fish/` 目錄下的所有檔案及目錄加入到 `files` 變數中
   files << Dir.glob(".config/fish/*")
+  # 將 `files` 變數中的多維陣列轉換成一維陣列
   files = files.flatten
+  # 刪除檔案名稱中以 `.sw` 結尾的檔案
   files.delete_if { |x| x.match(/\.\w+\.sw[a-z]/) }
 
   puts GREEN + "======================================================" + NONE
@@ -123,12 +127,15 @@ def move_zsh_themes
   puts GREEN + "Linking oh-my-zsh theme..."                             + NONE
   puts GREEN + "======================================================" + NONE
   puts
-  target = "#{Dir.home}/.oh-my-zsh/custom/themes/powerlevel10k"
-  puts "clone powerlevel10k zsh_themes from git to #{target}"
+  source = "#{ENV["PWD"]}/.oh-my-zsh/themes/powerlevel10k"
+  target = "#{ENV["HOME"]}/.oh-my-zsh/custom/themes/powerlevel10k"
+  puts "symlink powerlevel10k zsh_themes from #{source} to #{target}"
+  # puts "clone powerlevel10k zsh_themes from git to #{target}"
 
   run %{ rm -rf #{target}.backup} if File.exists?(target + ".backup")
   run %{ mv #{target} #{target}.backup}
-  run %{ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git #{target}} unless File.exists?(target)
+  run %{ ln -s #{source} #{target}}
+  # run %{ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git #{target}} unless File.exists?(target)
 end
 
 def success_msg
