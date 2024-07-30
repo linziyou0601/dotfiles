@@ -24,7 +24,8 @@ brew "powershell/tap/powershell"
 cask "arc"
 # App to build and share containerised applications and microservices
 cask "docker"
-# Developer targeted fonts with a high number of glyphs
+# Online diagram software
+cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
 # Utility to hide menu bar items
 cask "hiddenbar"
@@ -51,6 +52,6 @@ cask "soduto"
 # Unpacks archive files
 cask "the-unarchiver"
 # OpenJDK distribution from Azul
-cask "zulu17"
+cask "zulu@17"
 # OpenJDK distribution from Azul
-cask "zulu8"
+cask "zulu@8"
