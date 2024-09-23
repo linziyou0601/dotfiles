@@ -35,6 +35,8 @@ cask "miniforge"
 cask "monitorcontrol"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Open source build of Lens Kubernetes IDE
 cask "openlens"
 # Search utility for icons8
