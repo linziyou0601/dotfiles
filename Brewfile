@@ -27,6 +27,8 @@ cask "docker"
 # Online diagram software
 cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
+# GIT client
+cask "fork"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Minimal installer for conda specific to conda-forge
