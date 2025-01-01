@@ -31,8 +31,6 @@ cask "font-caskaydia-cove-nerd-font"
 cask "fork"
 # Menu bar manager
 cask "jordanbaird-ice"
-# Lyrics for iTunes, Spotify, Vox and Audirvana Plus
-cask "lyricsx"
 # Minimal installer for conda specific to conda-forge
 cask "miniforge"
 # Tool to control external monitor brightness & volume
