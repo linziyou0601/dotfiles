@@ -144,3 +144,9 @@ if [ -f '/Users/linziyou/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/linziy
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/linziyou/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/linziyou/google-cloud-sdk/completion.zsh.inc'; fi
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/linziyou/.dart-cli-completion/zsh-config.zsh ]] && . /Users/linziyou/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

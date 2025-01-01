@@ -29,8 +29,10 @@ cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
-# Utility to hide menu bar items
-cask "hiddenbar"
+# Menu bar manager
+cask "jordanbaird-ice"
+# Lyrics for iTunes, Spotify, Vox and Audirvana Plus
+cask "lyricsx"
 # Minimal installer for conda specific to conda-forge
 cask "miniforge"
 # Tool to control external monitor brightness & volume
@@ -48,13 +50,15 @@ cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
 # GUI for streamlined Redis application development
-cask "redisinsight"
+cask "redis-insight"
 # Screenshot measurement and annotation tool
 cask "shottr"
 # Communicate and share information between devices
 cask "soduto"
 # Unpacks archive files
 cask "the-unarchiver"
+# Rust-based terminal
+cask "warp"
 # OpenJDK distribution from Azul
 cask "zulu@17"
 # OpenJDK distribution from Azul
