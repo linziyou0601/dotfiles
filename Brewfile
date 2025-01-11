@@ -20,8 +20,12 @@ brew "zsh-completions"
 brew "leoafarias/fvm/fvm"
 # Formula to install PowerShell
 brew "powershell/tap/powershell"
+# Local-first and end-to-end encrypted notes app
+cask "anytype"
 # Chromium based browser
 cask "arc"
+# Desktop password and login vault
+cask "bitwarden"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Online diagram software
