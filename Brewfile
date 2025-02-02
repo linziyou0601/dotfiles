@@ -26,8 +26,6 @@ cask "anytype"
 cask "arc"
 # Desktop password and login vault
 cask "bitwarden"
-# App to build and share containerised applications and microservices
-cask "docker"
 # Online diagram software
 cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
