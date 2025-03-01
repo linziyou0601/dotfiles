@@ -1,3 +1,4 @@
+tap "brewforge/extras"
 tap "dart-lang/dart"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
@@ -33,12 +34,16 @@ cask "font-caskaydia-cove-nerd-font"
 cask "fork"
 # Menu bar manager
 cask "jordanbaird-ice"
+# Ultimate Lyrics App
+cask "lyricsx-mxiris"
 # Minimal installer for conda specific to conda-forge
 cask "miniforge"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Handy utility to manage and customize the notch area
+cask "notchnook"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Open source build of Lens Kubernetes IDE
