@@ -60,6 +60,8 @@ cask "setapp"
 cask "shottr"
 # Communicate and share information between devices
 cask "soduto"
+# Music streaming service
+cask "spotify"
 # Unpacks archive files
 cask "the-unarchiver"
 # Rust-based terminal
