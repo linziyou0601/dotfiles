@@ -32,6 +32,8 @@ cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Ultimate Lyrics App
 cask "lyricsx-mxiris"
 # Minimal installer for conda specific to conda-forge
