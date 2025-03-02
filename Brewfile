@@ -32,8 +32,6 @@ cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Ultimate Lyrics App
 cask "lyricsx-mxiris"
 # Minimal installer for conda specific to conda-forge
@@ -42,8 +40,6 @@ cask "miniforge"
 cask "monitorcontrol"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# Handy utility to manage and customize the notch area
-cask "notchnook"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Open source build of Lens Kubernetes IDE
@@ -56,6 +52,8 @@ cask "postman"
 cask "raycast"
 # GUI for streamlined Redis application development
 cask "redis-insight"
+# Collection of apps available by subscription
+cask "setapp"
 # Screenshot measurement and annotation tool
 cask "shottr"
 # Communicate and share information between devices
