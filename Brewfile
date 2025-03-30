@@ -27,6 +27,8 @@ cask "anytype"
 cask "arc"
 # Desktop password and login vault
 cask "bitwarden"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Online diagram software
 cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
