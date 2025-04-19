@@ -9,12 +9,16 @@ tap "powershell/tap"
 brew "azure-cli"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# Libraries to talk to Microsoft SQL Server and Sybase databases
+brew "freetds"
 # Distributed revision control system
 brew "git"
 # Manage multiple Node.js versions
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Additional completion definitions for zsh
 brew "zsh-completions"
 # Simple cli to manage Flutter SDK versions per project
@@ -38,8 +42,6 @@ cask "fork"
 cask "jordanbaird-ice"
 # Ultimate Lyrics App
 cask "lyricsx-mxiris"
-# Minimal installer for conda specific to conda-forge
-cask "miniforge"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Reverse proxy, secure introspectable tunnels to localhost

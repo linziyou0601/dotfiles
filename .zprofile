@@ -37,18 +37,3 @@ export PATH="/Users/linziyou/fvm/versions/stable/bin:$PATH"
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/linziyou/Library/Application Support/JetBrains/Toolbox/scripts"
-
-# 此段語法需要miniforge3
-# 快捷語法建立x86_x64或arm架構的conda環境並同時安裝該架構的python
-conda_create_x64_env () {
-    # 範例：conda_create_x64_env myx64env python=3.10 
-    CONDA_SUBDIR=osx-64 conda create -n $@ 
-}
-conda_create_arm_env () {
-    # 範例：conda_create_arm_env myenv_x86 python=3.10 
-    CONDA_SUBDIR=osx-arm64 conda create -n $@ 
-}
-conda_set_env () {
-    # 範例：conda_set_env osx-64
-    conda config --env --set subdir $@ 
-}
