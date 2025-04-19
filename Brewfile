@@ -17,6 +17,8 @@ brew "git"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Additional completion definitions for zsh
@@ -31,6 +33,8 @@ cask "anytype"
 cask "arc"
 # Desktop password and login vault
 cask "bitwarden"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Online diagram software
