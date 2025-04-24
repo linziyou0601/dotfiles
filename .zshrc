@@ -134,5 +134,14 @@ if [ -f '/Users/linziyou/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 [[ -f /Users/linziyou/.dart-cli-completion/zsh-config.zsh ]] && . /Users/linziyou/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
-
+# uv env
 . "$HOME/.local/bin/env"
+
+# Locale
+export LANG="zh_TW.UTF-8"
+export LC_COLLATE="zh_TW.UTF-8"
+export LC_CTYPE="zh_TW.UTF-8"
+export LC_MESSAGES="zh_TW.UTF-8"
+export LC_MONETARY="zh_TW.UTF-8"
+export LC_NUMERIC="zh_TW.UTF-8"
+export LC_TIME="zh_TW.UTF-8"
