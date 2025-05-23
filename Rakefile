@@ -13,6 +13,7 @@ task :install do
   install_homebrew
   install_oh_my_zsh
   move_zsh_themes
+  install_zsh_plugins
   install_dotfile
 end
 
@@ -127,15 +128,26 @@ def move_zsh_themes
   puts GREEN + "Linking oh-my-zsh theme..."                             + NONE
   puts GREEN + "======================================================" + NONE
   puts
-  source = "#{ENV["PWD"]}/.oh-my-zsh/themes/powerlevel10k"
+  # source = "#{ENV["PWD"]}/.oh-my-zsh/themes/powerlevel10k"
   target = "#{ENV["HOME"]}/.oh-my-zsh/custom/themes/powerlevel10k"
-  puts "symlink powerlevel10k zsh_themes from #{source} to #{target}"
+  # puts "symlink powerlevel10k zsh_themes from #{source} to #{target}"
   # puts "clone powerlevel10k zsh_themes from git to #{target}"
 
-  run %{ rm -rf #{target}.backup} if File.exists?(target + ".backup")
-  run %{ mv #{target} #{target}.backup}
-  run %{ ln -s #{source} #{target}}
-  # run %{ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git #{target}} unless File.exists?(target)
+  # run %{ rm -rf #{target}.backup} if File.exists?(target + ".backup")
+  # run %{ mv #{target} #{target}.backup}
+  # run %{ ln -s #{source} #{target}}
+  run %{ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git #{target}} unless File.exists?(target)
+end
+
+def install_zsh_plugins
+  puts GREEN + "======================================================" + NONE
+  puts GREEN + "Installing oh-my-zsh plugin..."                         + NONE
+  puts GREEN + "======================================================" + NONE
+  target = "#{ENV["HOME"]}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+  run %{ git clone https://github.com/zsh-users/zsh-autosuggestions.git #{target} }
+
+  target = "#{ENV["HOME"]}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+  run %{ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git #{target} }
 end
 
 def success_msg

@@ -1,8 +1,5 @@
 tap "brewforge/extras"
 tap "dart-lang/dart"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "leoafarias/fvm"
 tap "powershell/tap"
 # Microsoft Azure CLI 2.0
@@ -29,8 +26,6 @@ brew "leoafarias/fvm/fvm"
 brew "powershell/tap/powershell"
 # Local-first and end-to-end encrypted notes app
 cask "anytype"
-# Chromium based browser
-cask "arc"
 # Desktop password and login vault
 cask "bitwarden"
 # Anthropic's official Claude AI desktop app
