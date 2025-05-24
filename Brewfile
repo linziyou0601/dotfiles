@@ -24,8 +24,6 @@ brew "zsh-completions"
 brew "leoafarias/fvm/fvm"
 # Formula to install PowerShell
 brew "powershell/tap/powershell"
-# Local-first and end-to-end encrypted notes app
-cask "anytype"
 # Desktop password and login vault
 cask "bitwarden"
 # Anthropic's official Claude AI desktop app
