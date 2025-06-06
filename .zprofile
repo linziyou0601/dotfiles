@@ -37,3 +37,7 @@ export PATH="/Users/linziyou/fvm/versions/stable/bin:$PATH"
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/linziyou/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# ADB
+export ANDROID_HOME=/Users/linziyou/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
