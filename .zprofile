@@ -20,12 +20,15 @@ list_java () {
 export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
 export JAVA_HOME_11=$(/usr/libexec/java_home -v11)
 export JAVA_HOME_17=$(/usr/libexec/java_home -v17)
+export JAVA_HOME_21=$(/usr/libexec/java_home -v21)
 # Java 8
 # export JAVA_HOME=$JAVA_HOME_8
 # Java 11
 # export JAVA_HOME=$JAVA_HOME_11
 # Java 17
-export JAVA_HOME=$JAVA_HOME_17
+# export JAVA_HOME=$JAVA_HOME_17
+# Java 21
+export JAVA_HOME=$JAVA_HOME_21
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"

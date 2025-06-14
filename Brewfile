@@ -30,6 +30,8 @@ cask "bitwarden"
 cask "claude"
 # Write, edit, and chat about your code with AI
 cask "cursor"
+# Window peeking utility app
+cask "dockdoor"
 # Online diagram software
 cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
@@ -69,5 +71,7 @@ cask "the-unarchiver"
 cask "warp"
 # OpenJDK distribution from Azul
 cask "zulu@17"
+# OpenJDK distribution from Azul
+cask "zulu@21"
 # OpenJDK distribution from Azul
 cask "zulu@8"
