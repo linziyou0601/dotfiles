@@ -51,8 +51,6 @@ cask "ngrok"
 cask "notion"
 # Open source build of Lens Kubernetes IDE
 cask "openlens"
-# Search utility for icons8
-cask "pichon"
 # Collaboration platform for API development
 cask "postman"
 # Control your tools with a few keystrokes
