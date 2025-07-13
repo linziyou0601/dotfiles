@@ -36,6 +36,8 @@ cask "cursor"
 cask "dockdoor"
 # Online diagram software
 cask "drawio"
+# Remote desktop and second display tool
+cask "duet"
 cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
