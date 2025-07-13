@@ -32,6 +32,8 @@ cask "claude"
 cask "coteditor"
 # Write, edit, and chat about your code with AI
 cask "cursor"
+# Virtual monitor for screen sharing
+cask "deskpad"
 # Window peeking utility app
 cask "dockdoor"
 # Online diagram software
@@ -47,8 +49,6 @@ cask "jordanbaird-ice"
 cask "lyricsx-mxiris"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-# Reverse proxy, secure introspectable tunnels to localhost
-cask "ngrok"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Open source build of Lens Kubernetes IDE
