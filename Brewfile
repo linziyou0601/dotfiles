@@ -32,14 +32,10 @@ cask "claude"
 cask "coteditor"
 # Write, edit, and chat about your code with AI
 cask "cursor"
-# Virtual monitor for screen sharing
-cask "deskpad"
 # Window peeking utility app
 cask "dockdoor"
 # Online diagram software
 cask "drawio"
-# Remote desktop and second display tool
-cask "duet"
 cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
