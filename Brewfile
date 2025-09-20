@@ -2,6 +2,8 @@ tap "brewforge/extras"
 tap "dart-lang/dart"
 tap "leoafarias/fvm"
 tap "powershell/tap"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Dependency manager for Cocoa projects
@@ -14,8 +16,6 @@ brew "git"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Additional completion definitions for zsh
@@ -40,7 +40,7 @@ cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
 # Menu bar manager
-cask "jordanbaird-ice"
+cask "jordanbaird-ice@beta"
 # Ultimate Lyrics App
 cask "lyricsx-mxiris"
 # Tool to control external monitor brightness & volume
