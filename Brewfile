@@ -41,6 +41,8 @@ cask "font-caskaydia-cove-nerd-font"
 cask "fork"
 # Menu bar manager
 cask "jordanbaird-ice@beta"
+# Pie menu
+cask "kando"
 # Ultimate Lyrics App
 cask "lyricsx-mxiris"
 # Tool to control external monitor brightness & volume
