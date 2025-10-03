@@ -70,8 +70,8 @@ cask "the-unarchiver"
 # Rust-based terminal
 cask "warp"
 # OpenJDK distribution from Azul
-cask "zulu@17"
+cask "zulu"
 # OpenJDK distribution from Azul
-cask "zulu@21"
+cask "zulu@17"
 # OpenJDK distribution from Azul
 cask "zulu@8"
