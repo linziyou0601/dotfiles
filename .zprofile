@@ -44,3 +44,26 @@ export PATH="$PATH:/Users/linziyou/Library/Application Support/JetBrains/Toolbox
 # ADB
 export ANDROID_HOME=/Users/linziyou/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Kubernetes
+kubectl_deployments () {
+    kubectl get deployments --all-namespaces=true
+}
+kubectl_deployment_in_namespace () { # $1: namespace
+    kubectl get deployments -n $1
+}
+kubectl_pods_in_namespace () { # $1: namespace
+    kubectl get pods -n $1
+}
+kubectl_logs_in_pod () { # $1: pod, $2: namespace
+    kubectl logs -f $1 -n $2
+}
+kubectl_exec_in_pod () { # $1: namespace, $2: pod, $3: command
+    kubectl exec -n $1 $2 -- $3
+}
+kubectl_exec_bash_in_pod () { # $1: namespace, $2: pod
+    kubectl exec -it $1 -n $2 -- /bin/bash
+}
+kubectl_port_forward_in_pod () { # $1: pod, $2: port, $3: port to forward, $4: namespace
+    kubectl port-forward pod/$1 $2:$3 -n $4
+}
