@@ -58,6 +58,9 @@ kubectl_pods_in_namespace () { # $1: namespace
 kubectl_logs_in_pod () { # $1: pod, $2: namespace
     kubectl logs -f $1 -n $2
 }
+kubectl_logs_in_app () { # $1: app-label, $2: namespace
+    kubectl logs -f -l app=$1 -n $2
+}
 kubectl_exec_in_pod () { # $1: namespace, $2: pod, $3: command
     kubectl exec -n $1 $2 -- $3
 }
@@ -66,4 +69,7 @@ kubectl_exec_bash_in_pod () { # $1: namespace, $2: pod
 }
 kubectl_port_forward_in_pod () { # $1: pod, $2: port, $3: port to forward, $4: namespace
     kubectl port-forward pod/$1 $2:$3 -n $4
+}
+stern_logs() { # $1: pod-name-pattern, $2: namespace
+    stern $1 -n $2
 }
