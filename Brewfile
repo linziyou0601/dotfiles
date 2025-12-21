@@ -1,4 +1,3 @@
-tap "brewforge/extras"
 tap "dart-lang/dart"
 tap "leoafarias/fvm"
 tap "powershell/tap"
@@ -43,8 +42,6 @@ cask "font-caskaydia-cove-nerd-font"
 cask "fork"
 # Menu bar manager
 cask "jordanbaird-ice@beta"
-# Ultimate Lyrics App
-cask "lyricsx-mxiris"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # App to write, plan, collaborate, and get organised
