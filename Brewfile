@@ -1,6 +1,7 @@
 tap "dart-lang/dart"
 tap "leoafarias/fvm"
 tap "powershell/tap"
+tap "theboredteam/boring-notch"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Microsoft Azure CLI 2.0
@@ -27,6 +28,8 @@ brew "leoafarias/fvm/fvm"
 brew "powershell/tap/powershell"
 # Desktop password and login vault
 cask "bitwarden"
+# Not so boring notch That Rocks 🎸🎶 
+cask "boring-notch"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Plain-text editor for web pages, program source codes and more
@@ -56,8 +59,6 @@ cask "raycast"
 cask "redis-insight"
 # Collection of apps available by subscription
 cask "setapp"
-# Screenshot measurement and annotation tool
-cask "shottr"
 # Communicate and share information between devices
 cask "soduto"
 # Music streaming service
