@@ -135,7 +135,7 @@ if [ -f '/Users/linziyou/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 ## [/Completion]
 
 # uv env
-# . "$HOME/.local/bin/env"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Locale
 export LANG="zh_TW.UTF-8"
