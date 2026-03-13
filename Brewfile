@@ -16,6 +16,8 @@ brew "git"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
+# Command-line shell and scripting language
+brew "powershell"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -24,12 +26,10 @@ brew "uv"
 brew "zsh-completions"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
-# Formula to install PowerShell
-brew "powershell/tap/powershell"
 # Desktop password and login vault
 cask "bitwarden"
 # Not so boring notch That Rocks 🎸🎶 
-cask "boring-notch"
+cask "theboredteam/boring-notch/boring-notch"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Plain-text editor for web pages, program source codes and more
@@ -43,8 +43,6 @@ cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
-# Menu bar manager
-cask "jordanbaird-ice@beta"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # App to write, plan, collaborate, and get organised
@@ -63,6 +61,8 @@ cask "setapp"
 cask "soduto"
 # Music streaming service
 cask "spotify"
+# Menu bar manager
+cask "thaw"
 # Unpacks archive files
 cask "the-unarchiver"
 # Rust-based terminal
