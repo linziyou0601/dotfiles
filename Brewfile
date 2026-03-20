@@ -45,8 +45,8 @@ cask "font-caskaydia-cove-nerd-font"
 cask "fork"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-# App to write, plan, collaborate, and get organised
-cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Open source build of Lens Kubernetes IDE
 cask "openlens"
 # Collaboration platform for API development
@@ -65,6 +65,8 @@ cask "spotify"
 cask "thaw"
 # Unpacks archive files
 cask "the-unarchiver"
+# Web browser
+cask "thebrowsercompany-dia"
 # Rust-based terminal
 cask "warp"
 # OpenJDK distribution from Azul
