@@ -1,3 +1,6 @@
+# ============================================================
+# Powerlevel10k Instant Prompt
+# ============================================================
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,6 +8,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+# ============================================================
+# Oh My Zsh
+# ============================================================
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -77,7 +84,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( 
+plugins=(
   git
   # other plugins...
   zsh-autosuggestions
@@ -112,6 +119,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+# ============================================================
+# Completions & Tools
+# ============================================================
 # zsh-completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -134,14 +145,52 @@ if [ -f '/Users/linziyou/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 [[ -f /Users/linziyou/.dart-cli-completion/zsh-config.zsh ]] && . /Users/linziyou/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
-# uv env
-export PATH="$HOME/.local/bin:$PATH"
 
-# Locale
-export LANG="zh_TW.UTF-8"
-export LC_COLLATE="zh_TW.UTF-8"
-export LC_CTYPE="zh_TW.UTF-8"
-export LC_MESSAGES="zh_TW.UTF-8"
-export LC_MONETARY="zh_TW.UTF-8"
-export LC_NUMERIC="zh_TW.UTF-8"
-export LC_TIME="zh_TW.UTF-8"
+# ============================================================
+# Custom Functions
+# ============================================================
+# Brewfile
+brew_dump () {
+    brew bundle dump --describe
+}
+brew_dump_force () {
+    brew bundle dump --describe --force
+}
+brew_bundle_restore () {
+    brew bundle --file ~/.dotfiles/Brewfile
+}
+
+# Java
+list_java () {
+    echo "execute bash command:\n/usr/libexec/java_home -V\n"
+    /usr/libexec/java_home -V
+}
+
+# Kubernetes
+kubectl_deployments () {
+    kubectl get deployments --all-namespaces=true
+}
+kubectl_deployment_in_namespace () { # $1: namespace
+    kubectl get deployments -n $1
+}
+kubectl_pods_in_namespace () { # $1: namespace
+    kubectl get pods -n $1
+}
+kubectl_logs_in_pod () { # $1: pod, $2: namespace
+    kubectl logs -f $1 -n $2
+}
+kubectl_logs_in_app () { # $1: app-label, $2: namespace
+    kubectl logs -f -l app=$1 -n $2
+}
+kubectl_exec_in_pod () { # $1: namespace, $2: pod, $3: command
+    kubectl exec -n $1 $2 -- $3
+}
+kubectl_exec_bash_in_pod () { # $1: namespace, $2: pod
+    kubectl exec -it $1 -n $2 -- /bin/bash
+}
+kubectl_port_forward_in_pod () { # $1: pod, $2: port, $3: port to forward, $4: namespace
+    kubectl port-forward pod/$1 $2:$3 -n $4
+}
+stern_logs() { # $1: pod-name-pattern, $2: namespace
+    stern $1 -n $2
+}
