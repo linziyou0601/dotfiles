@@ -28,10 +28,10 @@ brew "zsh-completions"
 brew "leoafarias/fvm/fvm"
 # Desktop password and login vault
 cask "bitwarden"
-# Not so boring notch That Rocks 🎸🎶 
-cask "theboredteam/boring-notch/boring-notch"
 # Anthropic's official Claude AI desktop app
 cask "claude"
+# OpenAI's Codex desktop app for managing coding agents
+cask "codex-app"
 # Plain-text editor for web pages, program source codes and more
 cask "coteditor"
 # Write, edit, and chat about your code with AI
