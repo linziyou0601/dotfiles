@@ -2,6 +2,8 @@ tap "dart-lang/dart"
 tap "leoafarias/fvm"
 tap "powershell/tap"
 tap "theboredteam/boring-notch"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Microsoft Azure CLI 2.0

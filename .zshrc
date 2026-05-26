@@ -194,3 +194,16 @@ kubectl_port_forward_in_pod () { # $1: pod, $2: port, $3: port to forward, $4: n
 stern_logs() { # $1: pod-name-pattern, $2: namespace
     stern $1 -n $2
 }
+
+# Claude Bedrock
+claude_bedrock_on () {
+    sed -i '' 's/"CLAUDE_CODE_USE_BEDROCK": "0"/"CLAUDE_CODE_USE_BEDROCK": "1"/' ~/.claude/settings.json
+    echo "CLAUDE_CODE_USE_BEDROCK = 1 (enabled)"
+}
+claude_bedrock_off () {
+    sed -i '' 's/"CLAUDE_CODE_USE_BEDROCK": "1"/"CLAUDE_CODE_USE_BEDROCK": "0"/' ~/.claude/settings.json
+    echo "CLAUDE_CODE_USE_BEDROCK = 0 (disabled)"
+}
+claude_bedrock_status () {
+    grep '"CLAUDE_CODE_USE_BEDROCK"' ~/.claude/settings.json
+}
