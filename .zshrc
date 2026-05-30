@@ -196,14 +196,26 @@ stern_logs() { # $1: pod-name-pattern, $2: namespace
 }
 
 # Claude Bedrock
-claude_bedrock_on () {
-    sed -i '' 's/"CLAUDE_CODE_USE_BEDROCK": "0"/"CLAUDE_CODE_USE_BEDROCK": "1"/' ~/.claude/settings.json
+claude_bedrock_on() {
+    export AWS_PROFILE="claude-code"
+    export AWS_REGION="us-east-1"
+    export CLAUDE_CODE_USE_BEDROCK="1"
+    export ANTHROPIC_DEFAULT_OPUS_MODEL="us.anthropic.claude-opus-4-8[1m]"
+    export ANTHROPIC_DEFAULT_SONNET_MODEL="us.anthropic.claude-sonnet-4-6"
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL="us.anthropic.claude-haiku-4-5-20251001-v1:0"
     echo "CLAUDE_CODE_USE_BEDROCK = 1 (enabled)"
 }
-claude_bedrock_off () {
-    sed -i '' 's/"CLAUDE_CODE_USE_BEDROCK": "1"/"CLAUDE_CODE_USE_BEDROCK": "0"/' ~/.claude/settings.json
+
+claude_bedrock_off() {
+    unset AWS_PROFILE
+    unset AWS_REGION
+    unset CLAUDE_CODE_USE_BEDROCK
+    unset ANTHROPIC_DEFAULT_OPUS_MODEL
+    unset ANTHROPIC_DEFAULT_SONNET_MODEL
+    unset ANTHROPIC_DEFAULT_HAIKU_MODEL
     echo "CLAUDE_CODE_USE_BEDROCK = 0 (disabled)"
 }
-claude_bedrock_status () {
-    grep '"CLAUDE_CODE_USE_BEDROCK"' ~/.claude/settings.json
+
+claude_bedrock_status() {
+    echo "CLAUDE_CODE_USE_BEDROCK = ${CLAUDE_CODE_USE_BEDROCK:-"(unset, Bedrock OFF)"}"
 }
