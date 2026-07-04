@@ -30,9 +30,6 @@ export NVM_DIR="$HOME/.nvm"
 # ============================================================
 # SDK & Tools PATH
 # ============================================================
-# Flutter
-export PATH="/Users/linziyou/fvm/versions/stable/bin:$PATH"
-
 # Added by Toolbox App
 export PATH="$PATH:/Users/linziyou/Library/Application Support/JetBrains/Toolbox/scripts"
 

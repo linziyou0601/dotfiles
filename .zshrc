@@ -140,11 +140,6 @@ if [ -f '/Users/linziyou/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/linziy
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/linziyou/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/linziyou/google-cloud-sdk/completion.zsh.inc'; fi
 
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /Users/linziyou/.dart-cli-completion/zsh-config.zsh ]] && . /Users/linziyou/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-
 
 # ============================================================
 # Custom Functions
@@ -196,26 +191,61 @@ stern_logs() { # $1: pod-name-pattern, $2: namespace
 }
 
 # Claude Bedrock
-claude_bedrock_on() {
-    export AWS_PROFILE="claude-code"
-    export AWS_REGION="us-east-1"
-    export CLAUDE_CODE_USE_BEDROCK="1"
-    export ANTHROPIC_DEFAULT_OPUS_MODEL="us.anthropic.claude-opus-4-8[1m]"
-    export ANTHROPIC_DEFAULT_SONNET_MODEL="us.anthropic.claude-sonnet-4-6"
-    export ANTHROPIC_DEFAULT_HAIKU_MODEL="us.anthropic.claude-haiku-4-5-20251001-v1:0"
-    echo "CLAUDE_CODE_USE_BEDROCK = 1 (enabled)"
+claude_switch_settings() {
+    local d="$HOME/.claude"
+    local active="$d/settings.json"
+    local marker="$d/.settings_profile"
+    local backup="$d/settings.json.bak"
+    local name="$1"
+
+    if [ -z "$name" ]; then
+        echo "usage: claude_switch_settings {status|clear|<名稱>}"; return 1
+    fi
+
+    case "$name" in
+        status)
+            if [ -f "$marker" ]; then
+                local cur; cur="$(cat "$marker")"
+                echo "current: $cur"
+                [ -f "$d/settings.$cur.json" ] || echo "warning: settings.$cur.json 不存在，無法重新套用"
+            else
+                echo "current: 尚未套用任何 profile"
+            fi
+            return 0 ;;
+        clear)
+            [ -f "$backup" ] && cp "$backup" "$active"
+            for f in "$d"/settings.*.json; do
+                [ -e "$f" ] || continue
+                [ "$f" = "$d/settings.local.json" ] && continue
+                rm -f "$f"
+            done
+            rm -f "$marker" "$backup"
+            echo "已還原並清除所有 profile，只保留 settings.json，重啟 Claude Code 生效"
+            return 0 ;;
+    esac
+
+    local target="$d/settings.$name.json"
+    if [ ! -f "$target" ]; then
+        printf "settings.%s.json 不存在，要從目前 settings.json 複製建立嗎? [y/N] " "$name"
+        read -r ans
+        case "$ans" in
+            y|Y)
+                cp "$active" "$target" && echo "已建立 settings.$name.json"
+                if [ -n "$EDITOR" ]; then "$EDITOR" "$target"
+                elif command -v open >/dev/null 2>&1; then open "$target"
+                elif command -v xdg-open >/dev/null 2>&1; then xdg-open "$target"
+                else echo "請手動編輯: $target"; fi
+                echo "編輯存檔後，再執行 claude_switch_settings $name 套用"
+                return 0 ;;
+            *)  echo "取消"; return 1 ;;
+        esac
+    fi
+
+    [ -f "$backup" ] || cp "$active" "$backup"
+    cp "$target" "$active" \
+        && printf '%s' "$name" > "$marker" \
+        && echo "已套用 $name，重啟 Claude Code 生效"
 }
 
-claude_bedrock_off() {
-    unset AWS_PROFILE
-    unset AWS_REGION
-    unset CLAUDE_CODE_USE_BEDROCK
-    unset ANTHROPIC_DEFAULT_OPUS_MODEL
-    unset ANTHROPIC_DEFAULT_SONNET_MODEL
-    unset ANTHROPIC_DEFAULT_HAIKU_MODEL
-    echo "CLAUDE_CODE_USE_BEDROCK = 0 (disabled)"
-}
-
-claude_bedrock_status() {
-    echo "CLAUDE_CODE_USE_BEDROCK = ${CLAUDE_CODE_USE_BEDROCK:-"(unset, Bedrock OFF)"}"
-}
+# Added by codebase-memory-mcp install
+export PATH="/Users/linziyou/.local/bin:$PATH"

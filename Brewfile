@@ -1,15 +1,13 @@
-tap "dart-lang/dart"
-tap "leoafarias/fvm"
-tap "powershell/tap"
-tap "theboredteam/boring-notch"
+tap "dart-lang/dart", trusted: true
+tap "leoafarias/fvm", trusted: true
+tap "powershell/tap", trusted: true
+tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
-# Dependency manager for Cocoa projects
-brew "cocoapods"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
 brew "freetds"
 # Distributed revision control system
@@ -18,16 +16,14 @@ brew "git"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
-# Command-line shell and scripting language
-brew "powershell"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Additional completion definitions for zsh
 brew "zsh-completions"
-# Simple cli to manage Flutter SDK versions per project
-brew "leoafarias/fvm/fvm"
+# Formula to install PowerShell
+brew "powershell/tap/powershell"
 # Desktop password and login vault
 cask "bitwarden"
 # Anthropic's official Claude AI desktop app
