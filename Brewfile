@@ -12,6 +12,8 @@ brew "azure-cli"
 brew "freetds"
 # Distributed revision control system
 brew "git"
+# Java-based project management
+brew "maven"
 # Manage multiple Node.js versions
 brew "nvm"
 # Development kit for the Java programming language
@@ -28,8 +30,6 @@ brew "powershell/tap/powershell"
 cask "bitwarden"
 # Anthropic's official Claude AI desktop app
 cask "claude"
-# OpenAI's Codex desktop app for managing coding agents
-cask "codex-app"
 # Plain-text editor for web pages, program source codes and more
 cask "coteditor"
 # Write, edit, and chat about your code with AI
@@ -71,5 +71,7 @@ cask "warp"
 cask "zulu"
 # OpenJDK distribution from Azul
 cask "zulu@17"
+# OpenJDK distribution from Azul
+cask "zulu@25"
 # OpenJDK distribution from Azul
 cask "zulu@8"
