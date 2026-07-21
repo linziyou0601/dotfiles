@@ -246,6 +246,3 @@ claude_switch_settings() {
         && printf '%s' "$name" > "$marker" \
         && echo "已套用 $name，重啟 Claude Code 生效"
 }
-
-# Added by codebase-memory-mcp install
-export PATH="/Users/linziyou/.local/bin:$PATH"
