@@ -63,8 +63,6 @@ cask "spotify"
 cask "thaw"
 # Unpacks archive files
 cask "the-unarchiver"
-# Web browser
-cask "thebrowsercompany-dia"
 # Rust-based terminal
 cask "warp"
 # OpenJDK distribution from Azul
