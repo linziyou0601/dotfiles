@@ -32,8 +32,6 @@ cask "bitwarden"
 cask "claude"
 # Plain-text editor for web pages, program source codes and more
 cask "coteditor"
-# Write, edit, and chat about your code with AI
-cask "cursor"
 # Window peeking utility app
 cask "dockdoor"
 # Online diagram software
