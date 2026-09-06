@@ -47,8 +47,6 @@ cask "obsidian"
 cask "openlens"
 # Collaboration platform for API development
 cask "postman"
-# Control your tools with a few keystrokes
-cask "raycast"
 # GUI for streamlined Redis application development
 cask "redis-insight"
 # Collection of apps available by subscription
