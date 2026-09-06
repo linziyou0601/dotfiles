@@ -42,21 +42,9 @@ nvm
 * 環境變數：`.zprofile`設定`NVM_DIR`
 * 列出環境：`nvm ls`
 
-### Flutter
-
-fvm
-
-* 環境變數：`.zprofile`設定`PATH`
-* 列出環境：`fvm list`
-
 ---
 
 ## 其他說明
-
-### 字型偏好
-
-* 終端機：`Caskaydia Cove Nerd Font Mono`
-* 編輯器：`JetBrains Mono`
 
 ### Rakefile
 
@@ -83,8 +71,3 @@ fvm
 ### hosts
 
 * 目錄：`/private/etc/hosts`
-
-### 標楷體
-
-1. 停用BiauKai
-2. 安裝Kaiu至 `~/Library/Fonts/DFKai-Patched-for-macOS` ，測試是否正常
