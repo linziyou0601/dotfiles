@@ -146,10 +146,10 @@ if [ -f '/Users/linziyou/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 # ============================================================
 # Brewfile
 brew_dump () {
-    brew bundle dump --describe
+    brew bundle dump
 }
 brew_dump_force () {
-    brew bundle dump --describe --force
+    brew bundle dump --force
 }
 brew_bundle_restore () {
     brew bundle --file ~/.dotfiles/Brewfile

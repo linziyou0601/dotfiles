@@ -2,8 +2,6 @@ tap "dart-lang/dart", trusted: true
 tap "leoafarias/fvm", trusted: true
 tap "powershell/tap", trusted: true
 tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
-# Official Amazon AWS command-line interface
-brew "awscli"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Microsoft Azure CLI 2.0
@@ -39,6 +37,8 @@ cask "drawio"
 cask "font-caskaydia-cove-nerd-font"
 # GIT client
 cask "fork"
+# Homebrew's official GUI
+cask "homebrew-app"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Knowledge base that works on top of a local folder of plain text Markdown files
