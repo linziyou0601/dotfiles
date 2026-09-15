@@ -115,9 +115,8 @@
   - Setapp
   - Monitor Control
   - Dock Door
-  - Thaw
   - Bitwarden
-  - Spotify
+  - Spotif
   - Claude
   - Codex
 

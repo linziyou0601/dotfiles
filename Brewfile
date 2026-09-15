@@ -2,8 +2,6 @@ tap "dart-lang/dart", trusted: true
 tap "leoafarias/fvm", trusted: true
 tap "powershell/tap", trusted: true
 tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
@@ -16,6 +14,8 @@ brew "maven"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -55,10 +55,6 @@ cask "setapp"
 cask "soduto"
 # Music streaming service
 cask "spotify"
-# Menu bar manager
-cask "thaw"
-# Unpacks archive files
-cask "the-unarchiver"
 # Rust-based terminal
 cask "warp"
 # OpenJDK distribution from Azul
