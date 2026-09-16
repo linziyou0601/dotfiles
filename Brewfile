@@ -51,8 +51,6 @@ cask "postman"
 cask "redis-insight"
 # Collection of apps available by subscription
 cask "setapp"
-# Communicate and share information between devices
-cask "soduto"
 # Music streaming service
 cask "spotify"
 # Rust-based terminal

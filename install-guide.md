@@ -105,7 +105,6 @@
   - Postman
   - Redis Insight
   - Open Lens
-  - Sudoto
 - Design
   - draw.io
 - Note
@@ -138,6 +137,7 @@
 - Windows App
 - Affinity
 - Dynamic Lyric
+- Sudoto
 - 地牛WakeUp
 - Microsoft 365
 - Microsoft To Do
