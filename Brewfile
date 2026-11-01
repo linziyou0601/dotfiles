@@ -1,5 +1,5 @@
+tap "btwld/fvm", "https://github.com/btwld/homebrew-fvm.git"
 tap "dart-lang/dart", trusted: true
-tap "leoafarias/fvm", trusted: true
 tap "powershell/tap", trusted: true
 tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
 # Microsoft Azure CLI 2.0
@@ -14,8 +14,6 @@ brew "maven"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -30,6 +28,8 @@ cask "bitwarden"
 cask "claude"
 # Plain-text editor for web pages, program source codes and more
 cask "coteditor"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 # Window peeking utility app
 cask "dockdoor"
 # Online diagram software
@@ -49,8 +49,8 @@ cask "openlens"
 cask "postman"
 # GUI for streamlined Redis application development
 cask "redis-insight"
-# Collection of apps available by subscription
-cask "setapp"
+# Native screenshots, recording, annotation, and editing from the menu bar
+cask "snapzy"
 # Music streaming service
 cask "spotify"
 # Rust-based terminal

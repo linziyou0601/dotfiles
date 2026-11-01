@@ -111,25 +111,19 @@
   - Obsidian
   - CotEditor
 - Utility
-  - Setapp
   - Monitor Control
   - Dock Door
   - Bitwarden
   - Spotif
   - Claude
   - Codex
+  - Snapzy
 
 ### JetBrains Toolbox
 
 - IntelliJ IDEA
 - DataGrip
 - Android Studio
-
-### Setapp
-
-- CleanShot X
-- CleanMyMac
-- FreeYourMusic
 
 ### 其他
 
@@ -138,9 +132,10 @@
 - Affinity
 - Dynamic Lyric
 - Sudoto
-- 地牛WakeUp
+- 地牛 WakeUp
 - Microsoft 365
 - Microsoft To Do
+- Mole 清理軟體
 - 通訊軟體
 
 <br>
